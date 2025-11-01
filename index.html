@@ -28,7 +28,7 @@
             backdrop-filter: blur(10px);
         }
         header p {
-            color: #e0f7fa; /* 調整開頭文字顏色為淺藍灰，適合深藍背景 */
+            color: #e0f7fa; /* 淺藍灰，適合深藍背景 */
             font-size: 1.1em;
             margin: 10px 0;
         }
@@ -56,6 +56,9 @@
             border-bottom: 3px solid #2a5298;
             padding-bottom: 10px;
             margin-bottom: 20px;
+        }
+        strong {
+            color: #000; /* 統一為黑色，確保與白色底高對比 */
         }
         .game-intro, .game-instructions {
             text-align: center;
@@ -101,7 +104,7 @@
         tr:hover {
             background: #f0f8ff;
         }
-        .policy-link {
+        .policy-link, .contact-link {
             display: inline-block;
             background: #1e3c72;
             color: white;
@@ -110,8 +113,17 @@
             border-radius: 5px;
             transition: background 0.3s;
         }
-        .policy-link:hover {
+        .policy-link:hover, .contact-link:hover {
             background: #2a5298;
+            text-decoration: none;
+        }
+        a {
+            color: #1e3c72;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
@@ -120,6 +132,12 @@
             background: rgba(0,0,0,0.2);
             margin-top: 40px;
             border-radius: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
         }
         @media (max-width: 768px) {
             h1 { font-size: 2em; }
@@ -131,27 +149,28 @@
 <body>
     <div class="container">
         <header>
-            <h1>🎮 新竹冬日童樂會</h1>
+            <h1>新竹冬日童樂會</h1>
             <p class="subtitle">客服與支援中心</p>
-            <p>歡迎來到 <strong>新竹冬日童樂會</strong> 的官方客服中心！這是專為我們的 AR 圖卡角色收集遊戲設計的支援頁面。我們的遊戲以可愛的 Anpanman 角色為主角，讓您在冬日氛圍中透過 AR 技術掃描圖卡，收集並互動角色。無論是遊戲問題、隱私權疑慮或回饋意見，這裡都能找到幫助。</p>
+            <p>歡迎來到 <b>新竹冬日童樂會</b> 的官方客服中心！</p>
+            <p>這是專為我們的 AR 圖卡角色收集遊戲設計的支援頁面。</p>
+            <p>我們的遊戲以可愛的 <b>麪包超人</b> 角色為主角，讓您在冬日氛圍中透過 AR 技術掃描圖卡，收集並互動角色。</p>
+            <p>無論是遊戲問題、隱私權疑慮或回饋意見，這裡都能找到幫助。</p>
             <p>如果您是第一次造訪，請從下面的遊戲介紹開始。如果有特定問題，請滾動至下方常見問題或聯絡我們。</p>
         </header>
 
         <section id="intro">
-            <h2>🎮 遊戲介紹：開始畫面</h2>
+            <h2>遊戲介紹：開始畫面</h2>
             <div class="game-intro">
-                <p>這是遊戲的開場畫面，充滿冬日節慶氛圍！藍色背景上點綴雪花，Anpanman 英雄們飛翔其中，新竹傳統建築在下方守護，象徵新竹冬日童樂會的溫暖與歡樂。</p>
-                <img src="start_screen.png" alt="遊戲開始畫面">
-                <p><em>(圖片描述：Anpanman 與夥伴們在雪中飛翔，背景有新竹城隍廟風格建築，標題為「新竹冬日童樂會 WINTER FESTIVAL」，下方有版權資訊 ©Takashi Yanase/Froebel-kan, TMS/N TV Licensed by Mighty Media Co., Ltd.)</em></p>
-            </div>
+                <p>這是遊戲的開場畫面，充滿冬日節慶氛圍！藍色背景上點綴雪花，<b>麪包超人</b> 英雄們飛翔其中，新竹傳統建築在下方守護，象徵新竹冬日童樂會的溫暖與歡樂。</p>
+                <img src="assets/start_screen.png" alt="遊戲開始畫面">
+             </div>
         </section>
 
         <section id="instructions">
-            <h2>📖 遊戲玩法說明：說明畫面</h2>
+            <h2>遊戲玩法說明：說明畫面</h2>
             <div class="game-instructions">
                 <p>以下是遊戲的詳細操作指南，讓您輕鬆上手 AR 冒險！掃描圖卡，解鎖 8 位角色，享受收集樂趣。</p>
-                <img src="instruction_screen.png" alt="遊戲說明畫面">
-                <p><em>(圖片描述：步驟式指南，包括 1. 掃描圖卡與 AR 互動、2. 下載 App 並啟動 AR 掃描、3. 收集角色並分享、4. 進入遊戲模式、5. 完成 8/8 收集並慶祝。底部有 Anpanman 英雄姿態，版權相同。)</em></p>
+                <img src="assets/instruction_start_button.png" alt="遊戲說明畫面">
             </div>
 
             <div class="steps">
@@ -165,7 +184,7 @@
                 </div>
                 <div class="step">
                     <h3>3. 收集角色</h3>
-                    <p>對準圖卡，AR 角色會跳出來！拖拉互動、收集進度。</p>
+                    <p>對準圖卡，只要夠接近，AR 角色就會跳出來，完成收集！</p>
                 </div>
                 <div class="step">
                     <h3>4. 分享樂趣</h3>
@@ -199,7 +218,7 @@
                     </tr>
                     <tr>
                         <td><strong>如何刪除遊戲進度？</strong></td>
-                        <td>在 App 設定中選擇「重置進度」，或直接刪除 App 重新安裝。所有資料均本地儲存。</td>
+                        <td>目前只能刪除 App 重新安裝。所有資料均本地儲存。</td>
                     </tr>
                     <tr>
                         <td><strong>支援哪些裝置？</strong></td>
@@ -215,7 +234,6 @@
                     </tr>
                 </tbody>
             </table>
-            <p style="text-align: center; margin-top: 20px;">更多問題？歡迎提交 <a href="https://github.com/yourusername/hsinchu-winter-fun-privacy/issues" style="color: #1e3c72; font-weight: bold;">GitHub Issues</a>。</p>
         </section>
 
         <section id="privacy">
@@ -226,11 +244,9 @@
         <section id="contact">
             <h2>📧 聯絡我們</h2>
             <ul style="font-size: 1.1em; line-height: 2;">
-                <li><strong>電子郵件</strong>：support@hsinchu-winter-fun.com (或您的實際信箱)</li>
-                <li><strong>GitHub 回饋</strong>：在 <a href="https://github.com/yourusername/hsinchu-winter-fun-privacy/issues" style="color: #1e3c72;">Issues 頁面</a> 提交 bug 報告或建議。</li>
-                <li><strong>社群</strong>：追蹤我們在 X (Twitter) @HsinchuWinterFun，或加入官方 Line 群組。</li>
-            </ul>
-            <p style="text-align: center; font-style: italic;">我們通常在 3-5 個工作日內回覆。感謝您的支持，讓冬日充滿 Anpanman 的魔法！</p>
+                <li><strong>電子郵件</strong>：piscesweilun.studio@gmail.com</li>
+             </ul>
+            <p style="text-align: center; font-style: italic;">我們通常在 3-5 個工作日內回覆。感謝您的支持，讓冬日充滿 <b>麪包超人</b>  的魔法！</p>
         </section>
 
         <footer>
